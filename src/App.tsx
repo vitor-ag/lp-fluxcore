@@ -324,11 +324,11 @@ function MockScreens() {
     },
     {
       label: 'Lançamento financeiro — integrado ao estoque',
-      src: '/screenshots/lancamento.png',
+      src: '/screenshots/financeiro.png',
     },
     {
-      label: 'Previsão de fluxo de caixa',
-      src: '/screenshots/previsao.png',
+      label: 'Fluxo de vendas',
+      src: '/screenshots/vendas.png',
     },
   ]
 

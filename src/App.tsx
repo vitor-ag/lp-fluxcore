@@ -1,19 +1,19 @@
 import { useState } from 'react'
 
-const NAV_HREF = '#prototipo'
+const NAV_HREF = 'https://github.com/vitor-ag/lp-fluxcore'
 
 function Nav() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-[#1E2D26] bg-[#07100C]/90 backdrop-blur-md">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-[#CDD5D9] bg-[#FCFDFD]/90 backdrop-blur-md">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <span className="font-mono-data text-[#1AE87C] text-sm font-600 tracking-widest uppercase">
-            Flux<span className="text-[#F0F5F2]">Core</span>
+          <span className="font-mono-data text-[#AD401B] text-sm font-600 tracking-widest uppercase">
+            Flux<span className="text-[#17242C]">Core</span>
           </span>
         </div>
         <a
           href={NAV_HREF}
-          className="font-mono-data text-xs tracking-wider uppercase px-4 py-2 border border-[#1AE87C] text-[#1AE87C] hover:bg-[#1AE87C] hover:text-[#07100C] transition-all duration-200 font-500"
+          className="font-mono-data text-xs tracking-wider uppercase px-4 py-2 border border-[#AD401B] text-[#AD401B] hover:bg-[#AD401B] hover:text-[#FCFDFD] transition-all duration-200 font-500"
         >
           Acesse o Protótipo
         </a>
@@ -24,34 +24,34 @@ function Nav() {
 
 function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-center pt-24 pb-20 px-6 relative overflow-hidden">
+    <section className="landing-hero min-h-screen flex flex-col justify-center pt-24 pb-20 px-6 relative overflow-hidden">
       {/* Grid background decoration */}
       <div
         className="absolute inset-0 opacity-[0.04]"
         style={{
           backgroundImage:
-            'linear-gradient(#1AE87C 1px, transparent 1px), linear-gradient(90deg, #1AE87C 1px, transparent 1px)',
+            'linear-gradient(#AD401B 1px, transparent 1px), linear-gradient(90deg, #AD401B 1px, transparent 1px)',
           backgroundSize: '64px 64px',
         }}
       />
 
       {/* Glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#1AE87C] opacity-[0.04] rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#AD401B] opacity-[0.04] rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto relative">
+      <div className="landing-hero-content max-w-6xl mx-auto relative">
         <div className="max-w-4xl">
-          <div className="font-mono-data text-[#1AE87C] text-xs tracking-widest uppercase mb-6 flex items-center gap-3">
-            <span className="w-8 h-px bg-[#1AE87C]" />
+          <div className="font-mono-data text-[#AD401B] text-xs tracking-widest uppercase mb-6 flex items-center gap-3">
+            <span className="w-8 h-px bg-[#AD401B]" />
             ERP para pequenos negócios
           </div>
 
-          <h1 className="font-display text-5xl md:text-7xl font-700 text-[#F0F5F2] leading-[1.05] mb-6">
+          <h1 className="font-display text-5xl md:text-7xl font-700 text-[#17242C] leading-[1.05] mb-6">
             O único ERP que une estoque e financeiro para{' '}
-            <em className="text-[#1AE87C] not-italic">prever o futuro</em> do
+            <em className="text-[#AD401B] not-italic">prever o futuro</em> do
             seu negócio.
           </h1>
 
-          <p className="text-lg md:text-xl text-[#8BA898] max-w-2xl leading-relaxed mb-10 font-300">
+          <p className="text-lg md:text-xl text-[#505E69] max-w-2xl leading-relaxed mb-10 font-300">
             FluxCore integra estoque, fluxo de caixa e previsão em um só lugar
             — feito para donos de pequenos negócios que não podem se dar ao
             luxo de serem pegos de surpresa pelo caixa.
@@ -60,30 +60,30 @@ function Hero() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <a
               id="prototipo"
-              href="#oferta"
-              className="inline-flex items-center gap-3 bg-[#1AE87C] text-[#07100C] font-600 px-8 py-4 text-sm tracking-wide uppercase font-mono-data hover:bg-[#22F58A] transition-colors duration-200 group"
+              href="https://github.com/vitor-ag/lp-fluxcore"
+              className="landing-button inline-flex items-center gap-3 bg-[#AD401B] text-[#FCFDFD] font-600 px-8 py-4 text-sm tracking-wide uppercase font-mono-data hover:bg-[#943514] transition-colors duration-200 group"
             >
               Acesse o Protótipo
               <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
             </a>
-            <span className="text-[#8BA898] text-sm font-mono-data">
+            <span className="text-[#505E69] text-sm font-mono-data">
               Sem custo · Acesso antecipado
             </span>
           </div>
         </div>
 
         {/* Metric strip */}
-        <div className="mt-20 grid grid-cols-3 md:grid-cols-3 gap-px bg-[#1E2D26]">
+        <div className="landing-metrics mt-20 grid grid-cols-3 md:grid-cols-3 gap-px bg-[#CDD5D9]">
           {[
             { value: '100%', label: 'Integração automática' },
             { value: '0 ₀', label: 'Planilhas manuais' },
             { value: '∞', label: 'Meses de previsão' },
           ].map((m) => (
-            <div key={m.label} className="bg-[#07100C] px-6 py-5">
-              <div className="font-display text-3xl text-[#1AE87C] font-700 mb-1">
+            <div key={m.label} className="bg-[#FCFDFD] px-6 py-5">
+              <div className="font-display text-3xl text-[#AD401B] font-700 mb-1">
                 {m.value}
               </div>
-              <div className="font-mono-data text-[10px] text-[#8BA898] uppercase tracking-widest">
+              <div className="font-mono-data text-[10px] text-[#505E69] uppercase tracking-widest">
                 {m.label}
               </div>
             </div>
@@ -96,30 +96,30 @@ function Hero() {
 
 function Opening() {
   return (
-    <section className="py-24 px-6 border-t border-[#1E2D26]">
+    <section className="py-24 px-6 border-t border-[#CDD5D9]">
       <div className="max-w-6xl mx-auto grid md:grid-cols-[1fr_2fr] gap-12 items-start">
         <div>
-          <div className="font-mono-data text-[#1AE87C] text-xs tracking-widest uppercase flex items-center gap-3">
+          <div className="font-mono-data text-[#AD401B] text-xs tracking-widest uppercase flex items-center gap-3">
             <span>01</span>
-            <span className="w-8 h-px bg-[#1AE87C]" />
+            <span className="w-8 h-px bg-[#AD401B]" />
             O Problema
           </div>
         </div>
         <div>
-          <p className="font-display text-2xl md:text-3xl text-[#F0F5F2] leading-snug mb-6 font-400">
+          <p className="font-display text-2xl md:text-3xl text-[#17242C] leading-snug mb-6 font-400">
             Todo mês, milhares de pequenos empresários brasileiros descobrem
             tarde demais que o caixa não vai fechar.{' '}
-            <em className="text-[#8BA898]">
+            <em className="text-[#505E69]">
               Não por falta de vendas — mas por falta de visibilidade.
             </em>
           </p>
-          <p className="text-[#8BA898] text-base leading-relaxed mb-4">
+          <p className="text-[#505E69] text-base leading-relaxed mb-4">
             Estoque de um lado, financeiro de outro, cada um em uma planilha
             diferente. Quando os dois não conversam, o resultado é sempre o
             mesmo: retrabalho, decisões no escuro e aquela sensação de estar
             sempre correndo atrás do prejuízo.
           </p>
-          <p className="text-[#8BA898] text-base leading-relaxed">
+          <p className="text-[#505E69] text-base leading-relaxed">
             O FluxCore nasceu para resolver exatamente isso. Não é mais um
             sistema para registrar números — é um ERP que integra estoque e
             financeiro automaticamente e projeta o seu caixa dos próximos
@@ -142,17 +142,17 @@ const PAINS = [
 
 function PainSection() {
   return (
-    <section className="py-24 px-6 bg-[#0D1A14]">
+    <section className="py-24 px-6 bg-[#EFF3F4]">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-3 mb-12">
-          <div className="font-mono-data text-[#1AE87C] text-xs tracking-widest uppercase flex items-center gap-3">
+          <div className="font-mono-data text-[#AD401B] text-xs tracking-widest uppercase flex items-center gap-3">
             <span>02</span>
-            <span className="w-8 h-px bg-[#1AE87C]" />
+            <span className="w-8 h-px bg-[#AD401B]" />
             Você já viveu isso?
           </div>
         </div>
 
-        <p className="font-display text-2xl md:text-3xl text-[#F0F5F2] mb-12 max-w-2xl font-400 leading-snug">
+        <p className="font-display text-2xl md:text-3xl text-[#17242C] mb-12 max-w-2xl font-400 leading-snug">
           Se você toca um pequeno negócio sozinho (ou quase sozinho),
           provavelmente já viveu isso:
         </p>
@@ -161,19 +161,19 @@ function PainSection() {
           {PAINS.map((pain, i) => (
             <div
               key={i}
-              className="flex gap-6 items-start bg-[#07100C] border border-[#1E2D26] px-6 py-5 hover:border-[#1AE87C]/30 transition-colors duration-200 group"
+              className="flex gap-6 items-start bg-[#FCFDFD] border border-[#CDD5D9] px-6 py-5 hover:border-[#AD401B]/30 transition-colors duration-200 group"
             >
-              <span className="font-mono-data text-[#1AE87C]/40 text-xs mt-1 shrink-0 group-hover:text-[#1AE87C] transition-colors duration-200">
+              <span className="font-mono-data text-[#AD401B]/40 text-xs mt-1 shrink-0 group-hover:text-[#AD401B] transition-colors duration-200">
                 {String(i + 1).padStart(2, '0')}
               </span>
-              <p className="text-[#8BA898] text-base leading-relaxed group-hover:text-[#F0F5F2] transition-colors duration-200">
+              <p className="text-[#505E69] text-base leading-relaxed group-hover:text-[#17242C] transition-colors duration-200">
                 {pain}
               </p>
             </div>
           ))}
         </div>
 
-        <p className="mt-8 text-[#8BA898] text-sm border-l-2 border-[#1AE87C] pl-4 max-w-xl">
+        <p className="mt-8 text-[#505E69] text-sm border-l-2 border-[#AD401B] pl-4 max-w-xl">
           Nenhuma dessas situações é falta de competência sua. É falta de uma
           ferramenta que realmente converse com a forma como seu negócio
           funciona.
@@ -185,35 +185,35 @@ function PainSection() {
 
 function Solution() {
   return (
-    <section className="py-24 px-6 border-t border-[#1E2D26]">
+    <section className="py-24 px-6 border-t border-[#CDD5D9]">
       <div className="max-w-6xl mx-auto grid md:grid-cols-[1fr_2fr] gap-12 items-start">
         <div>
-          <div className="font-mono-data text-[#1AE87C] text-xs tracking-widest uppercase flex items-center gap-3">
+          <div className="font-mono-data text-[#AD401B] text-xs tracking-widest uppercase flex items-center gap-3">
             <span>03</span>
-            <span className="w-8 h-px bg-[#1AE87C]" />
+            <span className="w-8 h-px bg-[#AD401B]" />
             A Solução
           </div>
         </div>
         <div>
-          <h2 className="font-display text-3xl md:text-4xl font-700 text-[#F0F5F2] mb-6 leading-tight">
+          <h2 className="font-display text-3xl md:text-4xl font-700 text-[#17242C] mb-6 leading-tight">
             Estoque sai → lançamento financeiro entra.{' '}
-            <em className="text-[#1AE87C] not-italic">Automático.</em>
+            <em className="text-[#AD401B] not-italic">Automático.</em>
           </h2>
-          <p className="text-[#8BA898] text-base leading-relaxed mb-6">
+          <p className="text-[#505E69] text-base leading-relaxed mb-6">
             O FluxCore resolve isso com um mecanismo simples, mas que
             praticamente nenhuma solução acessível no mercado oferece: a saída
             de um produto do estoque já gera, automaticamente, o lançamento
             financeiro correspondente. Sem planilha dupla, sem conciliação
             manual, sem "esquecer de lançar".
           </p>
-          <p className="text-[#8BA898] text-base leading-relaxed">
+          <p className="text-[#505E69] text-base leading-relaxed">
             E não para por aí: com base no seu histórico de movimentações, o
             FluxCore projeta seu fluxo de caixa para os próximos meses,
             alertando quando o saldo futuro tende a ficar apertado — antes que
             isso vire um problema real.
           </p>
 
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-px bg-[#1E2D26]">
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-px bg-[#CDD5D9]">
             {[
               {
                 icon: '⇄',
@@ -226,14 +226,14 @@ function Solution() {
                 desc: 'Saldo projetado para os próximos meses, atualizado em tempo real.',
               },
             ].map((f) => (
-              <div key={f.title} className="bg-[#07100C] p-6">
-                <span className="text-[#1AE87C] text-2xl mb-3 block font-mono-data">
+              <div key={f.title} className="bg-[#FCFDFD] p-6">
+                <span className="text-[#AD401B] text-2xl mb-3 block font-mono-data">
                   {f.icon}
                 </span>
-                <h3 className="font-display text-lg font-700 text-[#F0F5F2] mb-2">
+                <h3 className="font-display text-lg font-700 text-[#17242C] mb-2">
                   {f.title}
                 </h3>
-                <p className="text-[#8BA898] text-sm leading-relaxed">{f.desc}</p>
+                <p className="text-[#505E69] text-sm leading-relaxed">{f.desc}</p>
               </div>
             ))}
           </div>
@@ -278,32 +278,32 @@ const BENEFITS = [
 
 function Benefits() {
   return (
-    <section className="py-24 px-6 bg-[#0D1A14]">
+    <section className="py-24 px-6 bg-[#EFF3F4]">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-3 mb-4">
-          <div className="font-mono-data text-[#1AE87C] text-xs tracking-widest uppercase flex items-center gap-3">
+          <div className="font-mono-data text-[#AD401B] text-xs tracking-widest uppercase flex items-center gap-3">
             <span>04</span>
-            <span className="w-8 h-px bg-[#1AE87C]" />
+            <span className="w-8 h-px bg-[#AD401B]" />
             Por que o FluxCore
           </div>
         </div>
-        <h2 className="font-display text-3xl md:text-4xl font-700 text-[#F0F5F2] mb-12 max-w-2xl leading-tight">
+        <h2 className="font-display text-3xl md:text-4xl font-700 text-[#17242C] mb-12 max-w-2xl leading-tight">
           Benefícios reais, não funcionalidades de catálogo.
         </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#1E2D26]">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#CDD5D9]">
           {BENEFITS.map((b) => (
             <div
               key={b.n}
-              className="bg-[#0D1A14] p-8 hover:bg-[#142119] transition-colors duration-200 group"
+              className="landing-card bg-[#EFF3F4] p-8 hover:bg-[#E6ECEF] transition-colors duration-200 group"
             >
-              <div className="font-mono-data text-[#1AE87C]/30 text-xs mb-4 group-hover:text-[#1AE87C] transition-colors duration-200">
+              <div className="font-mono-data text-[#AD401B]/30 text-xs mb-4 group-hover:text-[#AD401B] transition-colors duration-200">
                 {b.n}
               </div>
-              <h3 className="font-display text-xl font-700 text-[#F0F5F2] mb-3 leading-snug">
+              <h3 className="font-display text-xl font-700 text-[#17242C] mb-3 leading-snug">
                 {b.title}
               </h3>
-              <p className="text-[#8BA898] text-sm leading-relaxed">{b.desc}</p>
+              <p className="text-[#505E69] text-sm leading-relaxed">{b.desc}</p>
             </div>
           ))}
         </div>
@@ -333,45 +333,45 @@ function MockScreens() {
   ]
 
   return (
-    <section className="py-24 px-6 border-t border-[#1E2D26]">
+    <section className="py-24 px-6 border-t border-[#CDD5D9]">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-3 mb-4">
-          <div className="font-mono-data text-[#1AE87C] text-xs tracking-widest uppercase flex items-center gap-3">
+          <div className="font-mono-data text-[#AD401B] text-xs tracking-widest uppercase flex items-center gap-3">
             <span>05</span>
-            <span className="w-8 h-px bg-[#1AE87C]" />
+            <span className="w-8 h-px bg-[#AD401B]" />
             Veja em ação
           </div>
         </div>
-        <h2 className="font-display text-3xl md:text-4xl font-700 text-[#F0F5F2] mb-12 max-w-2xl leading-tight">
+        <h2 className="font-display text-3xl md:text-4xl font-700 text-[#17242C] mb-12 max-w-2xl leading-tight">
           Um sistema funcional em evolução — não só um mockup de tela.
         </h2>
 
         <div className="grid md:grid-cols-2 gap-4">
           {screens.map((s) => (
-            <div key={s.label} className="border border-[#1E2D26] hover:border-[#1AE87C]/40 transition-colors duration-300 overflow-hidden group">
+            <div key={s.label} className="landing-card landing-screen border border-[#CDD5D9] hover:border-[#AD401B]/40 transition-colors duration-300 overflow-hidden group">
               {/* "Titlebar" */}
-              <div className="flex items-center gap-2 px-4 py-3 bg-[#0D1A14] border-b border-[#1E2D26]">
-                <span className="w-2 h-2 rounded-full bg-[#1E2D26]" />
-                <span className="w-2 h-2 rounded-full bg-[#1E2D26]" />
-                <span className="w-2 h-2 rounded-full bg-[#1E2D26]" />
-                <span className="font-mono-data text-[#8BA898] text-[9px] ml-2 uppercase tracking-widest">FluxCore</span>
+              <div className="flex items-center gap-2 px-4 py-3 bg-[#EFF3F4] border-b border-[#CDD5D9]">
+                <span className="w-2 h-2 rounded-full bg-[#CDD5D9]" />
+                <span className="w-2 h-2 rounded-full bg-[#CDD5D9]" />
+                <span className="w-2 h-2 rounded-full bg-[#CDD5D9]" />
+                <span className="font-mono-data text-[#505E69] text-[9px] ml-2 uppercase tracking-widest">FluxCore</span>
               </div>
-              <div className="bg-[#07100C]">
+              <div className="bg-[#FCFDFD]">
                 <img src={s.src} alt={s.label} className="w-full h-64 object-cover block" />
               </div>
-              <div className="px-4 py-3 bg-[#0D1A14] border-t border-[#1E2D26]">
-                <p className="font-mono-data text-[#8BA898] text-[10px] uppercase tracking-wider">{s.label}</p>
+              <div className="px-4 py-3 bg-[#EFF3F4] border-t border-[#CDD5D9]">
+                <p className="font-mono-data text-[#505E69] text-[10px] uppercase tracking-wider">{s.label}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <p className="mt-4 text-[#8BA898]/60 text-xs font-mono-data text-center">
+        <p className="mt-4 text-[#505E69]/60 text-xs font-mono-data text-center">
           Dados ilustrativos para fins de demonstração.
         </p>
 
-        <div className="mt-8 border-l-2 border-[#1AE87C] pl-5 max-w-2xl">
-          <p className="text-[#8BA898] text-sm leading-relaxed">
+        <div className="mt-8 border-l-2 border-[#AD401B] pl-5 max-w-2xl">
+          <p className="text-[#505E69] text-sm leading-relaxed">
             Por trás do projeto: o FluxCore já tem seu ambiente de
             desenvolvimento completo validado, com integração real entre os
             módulos de estoque e financeiro rodando de ponta a ponta — não é
@@ -393,11 +393,11 @@ function Offer() {
   ]
 
   return (
-    <section id="oferta" className="py-24 px-6 bg-[#0D1A14]">
+    <section id="oferta" className="py-24 px-6 bg-[#EFF3F4]">
       <div className="max-w-6xl mx-auto">
-        <div className="font-mono-data text-[#1AE87C] text-xs tracking-widest uppercase flex items-center gap-3 mb-12">
+        <div className="font-mono-data text-[#AD401B] text-xs tracking-widest uppercase flex items-center gap-3 mb-12">
           <span>06</span>
-          <span className="w-8 h-px bg-[#1AE87C]" />
+          <span className="w-8 h-px bg-[#AD401B]" />
           O que você encontra no protótipo
         </div>
 
@@ -405,31 +405,31 @@ function Offer() {
           <div>
             <div className="space-y-3">
               {items.map((item) => (
-                <div key={item} className="flex items-start gap-4 py-4 border-b border-[#1E2D26]">
-                  <span className="text-[#1AE87C] font-mono-data text-sm shrink-0 mt-0.5">✓</span>
-                  <span className="text-[#F0F5F2] text-base">{item}</span>
+                <div key={item} className="flex items-start gap-4 py-4 border-b border-[#CDD5D9]">
+                  <span className="text-[#AD401B] font-mono-data text-sm shrink-0 mt-0.5">✓</span>
+                  <span className="text-[#17242C] text-base">{item}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="border border-[#1AE87C]/30 p-8">
-            <div className="font-mono-data text-[#1AE87C] text-xs uppercase tracking-widest mb-2">Acesso</div>
-            <div className="font-display text-4xl font-700 text-[#F0F5F2] mb-2">Gratuito</div>
-            <p className="text-[#8BA898] text-sm mb-6">
+          <div className="landing-offer border border-[#AD401B]/30 p-8">
+            <div className="font-mono-data text-[#AD401B] text-xs uppercase tracking-widest mb-2">Acesso</div>
+            <div className="font-display text-4xl font-700 text-[#17242C] mb-2">Gratuito</div>
+            <p className="text-[#505E69] text-sm mb-6">
               durante a fase de protótipo
             </p>
-            <p className="text-[#8BA898] text-sm leading-relaxed mb-8">
+            <p className="text-[#505E69] text-sm leading-relaxed mb-8">
               Estamos priorizando validação e feedback nesta fase — não há
               cobrança nem compromisso para conhecer e testar o sistema.
             </p>
             <a
-              href="#prototipo"
-              className="w-full flex items-center justify-center gap-3 bg-[#1AE87C] text-[#07100C] font-600 px-8 py-4 text-sm tracking-wide uppercase font-mono-data hover:bg-[#22F58A] transition-colors duration-200"
+              href="https://github.com/vitor-ag/lp-fluxcore"
+              className="landing-button w-full flex items-center justify-center gap-3 bg-[#AD401B] text-[#FCFDFD] font-600 px-8 py-4 text-sm tracking-wide uppercase font-mono-data hover:bg-[#943514] transition-colors duration-200"
             >
               Acesse o Protótipo →
             </a>
-            <p className="text-center text-[#8BA898]/60 text-xs font-mono-data mt-4">
+            <p className="text-center text-[#505E69]/60 text-xs font-mono-data mt-4">
               Sem custo · Sem compromisso · Sem instalação
             </p>
           </div>
@@ -465,14 +465,14 @@ const OBJECTIONS = [
 function Objections() {
   const [open, setOpen] = useState<number | null>(null)
   return (
-    <section className="py-24 px-6 border-t border-[#1E2D26]">
+    <section className="py-24 px-6 border-t border-[#CDD5D9]">
       <div className="max-w-6xl mx-auto">
-        <div className="font-mono-data text-[#1AE87C] text-xs tracking-widest uppercase flex items-center gap-3 mb-4">
+        <div className="font-mono-data text-[#AD401B] text-xs tracking-widest uppercase flex items-center gap-3 mb-4">
           <span>07</span>
-          <span className="w-8 h-px bg-[#1AE87C]" />
+          <span className="w-8 h-px bg-[#AD401B]" />
           Dúvidas comuns
         </div>
-        <h2 className="font-display text-3xl md:text-4xl font-700 text-[#F0F5F2] mb-12 max-w-2xl leading-tight">
+        <h2 className="font-display text-3xl md:text-4xl font-700 text-[#17242C] mb-12 max-w-2xl leading-tight">
           Respostas diretas para as objeções mais comuns.
         </h2>
 
@@ -480,22 +480,22 @@ function Objections() {
           {OBJECTIONS.map((o, i) => (
             <div
               key={i}
-              className="border border-[#1E2D26] hover:border-[#1AE87C]/30 transition-colors duration-200"
+              className="border border-[#CDD5D9] hover:border-[#AD401B]/30 transition-colors duration-200"
             >
               <button
                 className="w-full flex justify-between items-start px-6 py-5 text-left gap-6"
                 onClick={() => setOpen(open === i ? null : i)}
               >
-                <span className="font-display text-lg text-[#F0F5F2] font-400 leading-snug">
+                <span className="font-display text-lg text-[#17242C] font-400 leading-snug">
                   {o.q}
                 </span>
-                <span className="font-mono-data text-[#1AE87C] shrink-0 mt-1 transition-transform duration-200" style={{ transform: open === i ? 'rotate(45deg)' : 'none' }}>
+                <span className="font-mono-data text-[#AD401B] shrink-0 mt-1 transition-transform duration-200" style={{ transform: open === i ? 'rotate(45deg)' : 'none' }}>
                   +
                 </span>
               </button>
               {open === i && (
                 <div className="px-6 pb-6">
-                  <p className="text-[#8BA898] text-base leading-relaxed border-t border-[#1E2D26] pt-4">
+                  <p className="text-[#505E69] text-base leading-relaxed border-t border-[#CDD5D9] pt-4">
                     {o.a}
                   </p>
                 </div>
@@ -538,33 +538,33 @@ const FAQ_ITEMS = [
 function FAQ() {
   const [open, setOpen] = useState<number | null>(null)
   return (
-    <section className="py-24 px-6 bg-[#0D1A14]">
+    <section className="py-24 px-6 bg-[#EFF3F4]">
       <div className="max-w-6xl mx-auto">
-        <div className="font-mono-data text-[#1AE87C] text-xs tracking-widest uppercase flex items-center gap-3 mb-4">
+        <div className="font-mono-data text-[#AD401B] text-xs tracking-widest uppercase flex items-center gap-3 mb-4">
           <span>08</span>
-          <span className="w-8 h-px bg-[#1AE87C]" />
+          <span className="w-8 h-px bg-[#AD401B]" />
           FAQ
         </div>
-        <h2 className="font-display text-3xl md:text-4xl font-700 text-[#F0F5F2] mb-12 max-w-xl leading-tight">
+        <h2 className="font-display text-3xl md:text-4xl font-700 text-[#17242C] mb-12 max-w-xl leading-tight">
           Perguntas frequentes.
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-px bg-[#1E2D26]">
+        <div className="grid md:grid-cols-2 gap-px bg-[#CDD5D9]">
           {FAQ_ITEMS.map((f, i) => (
-            <div key={i} className="bg-[#0D1A14] p-6">
+            <div key={i} className="bg-[#EFF3F4] p-6">
               <button
                 className="w-full flex justify-between items-start text-left gap-4 group"
                 onClick={() => setOpen(open === i ? null : i)}
               >
-                <span className="font-display text-base text-[#F0F5F2] font-400 group-hover:text-[#1AE87C] transition-colors duration-200">
+                <span className="font-display text-base text-[#17242C] font-400 group-hover:text-[#AD401B] transition-colors duration-200">
                   {f.q}
                 </span>
-                <span className="font-mono-data text-[#1AE87C] shrink-0 transition-transform duration-200" style={{ transform: open === i ? 'rotate(45deg)' : 'none' }}>
+                <span className="font-mono-data text-[#AD401B] shrink-0 transition-transform duration-200" style={{ transform: open === i ? 'rotate(45deg)' : 'none' }}>
                   +
                 </span>
               </button>
               {open === i && (
-                <p className="text-[#8BA898] text-sm leading-relaxed mt-4 border-t border-[#1E2D26] pt-4">
+                <p className="text-[#505E69] text-sm leading-relaxed mt-4 border-t border-[#CDD5D9] pt-4">
                   {f.a}
                 </p>
               )}
@@ -578,18 +578,18 @@ function FAQ() {
 
 function Guarantee() {
   return (
-    <section className="py-16 px-6 border-t border-[#1E2D26]">
+    <section className="py-16 px-6 border-t border-[#CDD5D9]">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-8">
         <div className="shrink-0">
-          <div className="w-16 h-16 border-2 border-[#1AE87C]/40 flex items-center justify-center">
-            <span className="font-mono-data text-[#1AE87C] text-2xl">○</span>
+          <div className="w-16 h-16 border-2 border-[#AD401B]/40 flex items-center justify-center">
+            <span className="font-mono-data text-[#AD401B] text-2xl">○</span>
           </div>
         </div>
         <div>
-          <h3 className="font-display text-2xl font-700 text-[#F0F5F2] mb-3">
+          <h3 className="font-display text-2xl font-700 text-[#17242C] mb-3">
             Zero risco, zero custo, zero compromisso.
           </h3>
-          <p className="text-[#8BA898] text-base leading-relaxed max-w-2xl">
+          <p className="text-[#505E69] text-base leading-relaxed max-w-2xl">
             Você não assume nenhum custo nem compromisso ao acessar o protótipo
             do FluxCore. O produto ainda está em fase de validação, e todo o
             processo é pensado para que você conheça a ferramenta sem risco — o
@@ -604,36 +604,36 @@ function Guarantee() {
 
 function FinalCTA() {
   return (
-    <section className="py-32 px-6 bg-[#0D1A14] relative overflow-hidden">
+    <section className="landing-close py-32 px-6 bg-[#EFF3F4] relative overflow-hidden">
       <div className="absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage: 'linear-gradient(#1AE87C 1px, transparent 1px), linear-gradient(90deg, #1AE87C 1px, transparent 1px)',
+          backgroundImage: 'linear-gradient(#AD401B 1px, transparent 1px), linear-gradient(90deg, #AD401B 1px, transparent 1px)',
           backgroundSize: '48px 48px',
         }}
       />
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[#1AE87C] opacity-[0.05] rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[#AD401B] opacity-[0.05] rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto relative text-center">
-        <h2 className="font-display text-4xl md:text-6xl font-700 text-[#F0F5F2] mb-6 leading-tight max-w-3xl mx-auto">
+      <div className="landing-hero-content max-w-6xl mx-auto relative text-center">
+        <h2 className="font-display text-4xl md:text-6xl font-700 text-[#17242C] mb-6 leading-tight max-w-3xl mx-auto">
           Seu negócio não precisa continuar sendo administrado{' '}
-          <em className="text-[#1AE87C] not-italic">no escuro.</em>
+          <em className="text-[#AD401B] not-italic">no escuro.</em>
         </h2>
-        <p className="text-[#8BA898] text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+        <p className="text-[#505E69] text-lg max-w-xl mx-auto mb-10 leading-relaxed">
           Enquanto planilhas separadas e cálculos manuais só mostram o passado,
           o FluxCore te ajuda a enxergar o que vem pela frente — e a decidir
           com segurança, não com esperança.
         </p>
         <a
-          href="#prototipo"
-          className="inline-flex items-center gap-3 bg-[#1AE87C] text-[#07100C] font-600 px-10 py-5 text-base tracking-wide uppercase font-mono-data hover:bg-[#22F58A] transition-colors duration-200 group"
+          href="https://github.com/vitor-ag/lp-fluxcore"
+          className="landing-button inline-flex items-center gap-3 bg-[#AD401B] text-[#FCFDFD] font-600 px-10 py-5 text-base tracking-wide uppercase font-mono-data hover:bg-[#943514] transition-colors duration-200 group"
         >
           Acesse o Protótipo
           <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
         </a>
 
-        <div className="mt-16 max-w-2xl mx-auto border-t border-[#1E2D26] pt-10">
-          <p className="text-[#8BA898] text-sm leading-relaxed">
-            <span className="text-[#1AE87C] font-mono-data">P.S.</span> — O
+        <div className="mt-16 max-w-2xl mx-auto border-t border-[#CDD5D9] pt-10">
+          <p className="text-[#505E69] text-sm leading-relaxed">
+            <span className="text-[#AD401B] font-mono-data">P.S.</span> — O
             FluxCore não é só mais um ERP. É a integração entre estoque,
             financeiro e previsão que faltava para o pequeno negócio parar de
             ser surpreendido pelo caixa. O protótipo já está de pé,
@@ -647,12 +647,12 @@ function FinalCTA() {
 
 function Footer() {
   return (
-    <footer className="py-8 px-6 border-t border-[#1E2D26]">
+    <footer className="py-8 px-6 border-t border-[#CDD5D9]">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-        <span className="font-mono-data text-[#1AE87C] text-sm font-600 tracking-widest uppercase">
-          Flux<span className="text-[#8BA898]">Core</span>
+        <span className="font-mono-data text-[#AD401B] text-sm font-600 tracking-widest uppercase">
+          Flux<span className="text-[#505E69]">Core</span>
         </span>
-        <p className="font-mono-data text-[#8BA898]/50 text-xs uppercase tracking-widest">
+        <p className="font-mono-data text-[#505E69]/50 text-xs uppercase tracking-widest">
           ERP para pequenos negócios · Equipe NewCode
         </p>
       </div>
@@ -662,7 +662,7 @@ function Footer() {
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#07100C]">
+    <div className="min-h-screen bg-[#FCFDFD]">
       <Nav />
       <main>
         <Hero />

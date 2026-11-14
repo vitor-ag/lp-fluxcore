@@ -316,19 +316,19 @@ function MockScreens() {
   const screens = [
     {
       label: 'Dashboard — saldo de caixa consolidado',
-      src: '/screenshots/dashboard.png',
+      src: `${import.meta.env.BASE_URL}screenshots/dashboard.png`,
     },
     {
       label: 'Estoque — cadastro de produtos',
-      src: '/screenshots/estoque.png',
+      src: `${import.meta.env.BASE_URL}screenshots/estoque.png`,
     },
     {
       label: 'Lançamento financeiro — integrado ao estoque',
-      src: '/screenshots/financeiro.png',
+      src: `${import.meta.env.BASE_URL}screenshots/financeiro.png`,
     },
     {
       label: 'Fluxo de vendas',
-      src: '/screenshots/vendas.png',
+      src: `${import.meta.env.BASE_URL}screenshots/vendas.png`,
     },
   ]
 
